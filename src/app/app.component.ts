@@ -27,10 +27,6 @@ export class AppComponent implements OnInit {
   private getCities(): void {
     const defaultWeathers: Partial<WeatherSchema>[] = [
       { name: 'Porto Alegre' },
-      { name: 'Papai' },
-      { name: 'Noel' },
-      { name: 'Curitiba' },
-      { name: 'Pará' }
     ]
 
     const storage = JSON.parse(
