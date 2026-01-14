@@ -10,8 +10,8 @@ import { WeatherSchema } from '../model/weather.model'
 export class WeatherService {
   constructor(private readonly httpClient: HttpClient) {}
 
-  private readonly api: string = environment.api
-  private readonly appid: string = environment.appid
+  private readonly api: string = environment.openweathermap.api
+  private readonly appid: string = environment.openweathermap.appid
 
   public LoadRightWeather(city: string): Observable<WeatherSchema> {
     const queryParam: string = `q=${city}&APPID=${this.appid}&units=metric`
